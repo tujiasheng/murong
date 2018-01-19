@@ -1,0 +1,457 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Html5新特性</title>
+		<link href="css/test_border_radius.css" rel="stylesheet" type="text/css" />	
+	</head>
+	<body>
+		<br><p class="p7">css3新特性-----------</p>
+		<div class="p0">
+			<p class="p1">圆角矩形内阴影</p>
+			<p class="p2">圆角矩形外阴影</p>
+			<p class="p3">制作半圆外阴影</p>
+			<p class="p4">画实心圆内阴影</p>
+			<p class="p5">线性渐变</p>
+			<p class="p6">旋转</p>
+			<p class="p6">图形变换</p>
+			<p class="p6">border-image</p>
+		</div>
+		<div class="div0">
+			<div class="div1"></div>
+			<div class="div2"></div>
+			<div class="div3"></div>
+			<div class="div4"></div>
+			<div class="div5"></div>
+			<div class="div6"></div>
+			<div class="div7"></div>
+			<div class="div8"></div>
+			<div class="div10">使用CSS3 ::selection伪元素改变文本选中颜色</div>
+		</div>
+		<hr />
+		<br><p class="p7">Html5的新特性-----------</p>
+		<br><p class="p7">拖动baby.jpg图片到矩形框中:</p>
+		<div class="div9" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: darkgoldenrod;"></div>
+		<div class="div01"><img id="drag1" src="images/baby.jpg" draggable="true" ondragstart="drag(event)" width="341" height="216"  style="margin-left: 10px;margin-right: 10px;"></div>
+		<hr />
+		<div class="div11">
+			<p align="center">
+			<video src="video/南昌航空大学科技学院12级信管班剪辑.mp4" controls="controls" id="video"width="341" height="216"  loop="loop">您的浏览器版本不支持</video>
+			</p>
+			<button onclick="bofang()">播放</button>
+	        <button onclick="zanting()">暂停</button>
+	        <button onclick="kuaijin()">快进10秒</button>
+	        <button onclick="kuaitui()">快退10秒</button>
+	        <button onclick="shutup(this)">静音</button>
+	        <button onclick="soso()">加速播放</button>
+	        <button onclick="yu()">减速播放</button>
+	        <button onclick="normal()">正常播放</button>
+	        <button onclick="upper()">提高嗓门</button>
+	        <button onclick="lower()">降低嗓门</button>
+	         <button id="expand">全屏</button>
+		</div>
+		<hr /> 
+		<div class="canva">
+			<!--canvas id="Mycanvas" 红色方框-->
+			<canvas id="Mycanvas" width="200" height="100" style="border:1px solid #930;"></canvas>
+			<!--canvas id="mycanvas" 画直线-->
+			<canvas id="mycanvas" width="200" height="100" style="border:1px solid #930;"></canvas>	
+			<!--canvas id="myCanvas" 画圆-->
+			<canvas id="myCanvas" width="300" height="150" style="border:1px solid #930;"></canvas>
+			<!--canvas id=MYcanvas"弧形-->
+			<canvas id="MYcanvas" width="300" height="150" style="border:1px solid #930;"></canvas>
+			<!--canvas id=MYCanvas"实心三角形-->
+			<canvas id="MYCanvas" width="300" height="150" style="border:1px solid #930;"></canvas>
+			<!--canvas id=MYCAnvas"空心三角形-->
+			<canvas id="MYCAnvas" width="300" height="150" style="border:1px solid #930;"></canvas>
+			<!--canvas id=MyCanvas"清空画布-->
+			<input name="" type="button" value="清空右侧画布" onclick="clearMap();" />
+			<canvas id="MyCanvas" width="300" height="150" style="border:1px solid #930;"></canvas>
+			<!--canvas id=MyCAnvas"绘制二次贝塞尔曲线-->
+			<canvas id="MyCAnvas" width="300" height="200" style="border:1px solid #930;"></canvas>
+			<!--canvas id=MycAnvas"保存于恢复canvas状态-->
+			<canvas id="MycAnvas" width="300" height="200" style=" border:1px solid #009"></canvas>
+			<!--canvas id=mYcanvas"移动坐标空间-->
+			<canvas id="mYcanvas" width="980" height="300" style=" border:1px solid #009"></canvas>
+		</div>	
+		<hr />
+		<div style="float: left;margin-top:10px;margin-bottom:10px;width: 100%;height: auto;border: 1px solid blueviolet;">
+			<h2>新增表单元素</h2>
+			<p>我们以前学过的表单元素包括&ldquo;text&rdquo;、&ldquo;button&rdquo;、&ldquo;file&rdquo;、"radio"等，html5中新增加了一些表单元素，下面列出这些元素及其作用</p>
+			<h3>新增表单元素如下：</h3>
+			<ul>
+				<li>email 类型用于验证email的格式，当提交表单时会自动验证email域的值</li>
+				<li>url 类型用于验证 URL 地址的格式，当提交表单时会自动验证url域的值</li>
+				<li>number 类型会根据你的设置提供选择数字的功能，min属性设置最小值、max属性设置最大值，value属性设置当前值，step属性设定每次增长的值，某些浏览器还不支持</li>
+				<li>range 类型用于应该包含一定范围内数字值的输入域，其会以一个滑块的形式展现，min属性设置最小值、max属性设置最大值，value属性设置当前值，如果没有设置，则其默认值的范围是1-100</li>
+				<li>日期和时间类型：HTML5 拥有多个可供选取日期和时间的新输入类型： <br />
+				   date - 选取日、月、年<br />
+				   month - 选取月、年<br />
+				   week - 选取周和年<br />
+				   time - 选取时间（小时和分钟）<br />
+				   datetime - 选取时间、日、月、年（UTC 时间）<br />
+				   datetime-local - 选取时间、日、月、年（本地时间）</li>
+				<li>search 类型用于搜索域，比如站点搜索或 Google 搜索，为其加上results="s"属性，则会在搜索框前面加上一个搜索图标</li>
+				<li>tel类型用于验证输入的是否是电话格式的内容，此元素现在还没有浏览器支持</li>
+				<li>color类型会提供一个颜色拾取器，供用户选择颜色，并将用户选择的颜色填充到此元素中</li>
+			</ul>
+		</div>
+		<div class="div12">
+			<p style="font-style: inherit; color: #0000FF;">新增表单元素</p>
+			<form action="upload.php" method="post" accept-charset="utf-8" id="form1">        
+			    <br> 主页:
+			    <input type="url" name="url" value="" placeholder="个人主页" required>
+			    <br> 邮箱:
+			    <input type="email" name="email" value="" placeholder="邮箱" required>
+			    <br> 生日:
+			    <input type="date" name="date" value="" required>
+			    <br> 时间:
+			    <input type="time" name="time" value="" required>
+			    <br> 星期:
+			    <input type="week" name="week" value="" required>
+			    <br> 年龄:
+			    <input type="number" name="age" value="">
+			    <br> 薪水:
+			    <input type="range" name="range" value="">
+			    <br> 电话:
+			    <input type="tel" name="tell" value="" placeholder="都不支持">
+			    <br> 颜色:
+			    <input type="color" name="mycolor">
+			    <br>
+			    <input type="search" name="key" value="" results="s"><br>
+			    <input type="submit" name="sub" value="提交" form="form1">
+			</form>
+		</div>
+		<hr />
+		<div  id="container">
+			 <div id="list" style="left: -600px;">
+				<ul>
+					<li><img src="images/4.jpg" alt="4"/></li>
+					<li><img src="images/1.jpg" alt="1"/></li>
+					<li><img src="images/2.jpg" alt="2"/></li>
+					<li><img src="images/3.jpg" alt="3"/></li>
+					<li><img src="images/4.jpg" alt="4"/></li>
+					<li><img src="images/1.jpg" alt="1"/></li>
+				</ul>
+			</div>
+		  	<div id="buttons">
+		        <span index="1" class="on"></span>
+		        <span index="2"></span>
+		        <span index="3"></span>
+		        <span index="4"></span>
+		        <span index="5"></span>
+		    </div>
+	  	    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+            <a href="javascript:;" id="next" class="arrow">&gt;</a>
+		</div>
+		<hr />
+	</body>
+	<script>
+        //获取相应的video标签
+        var video = document.getElementById('video');
+        //播放方法
+        function bofang(){
+            video.play();
+        }
+        //暂停方法
+        function zanting(){
+            video.pause();
+        }
+        //快进
+        function kuaijin(){
+            video.currentTime += 10;
+        }
+        //快退
+        function kuaitui(){
+            video.currentTime -= 10;
+        }
+        //静音、不静音
+        function shutup(obj){
+            if(video.muted){
+                // 有声音状态下状态下
+                obj.innerHTML = "静音";
+                video.muted = flase;
+            }
+            else{
+                obj.innerHTML = "声音";
+                video.muted = true;
+            }
+        }
+        //加速播放
+        function soso(){
+            video.playbackRate = 3;
+        }
+        //减速播放
+        function yu(){
+            video.playbackRate = 1/3;
+        }
+        //正常播放
+        function normal(){
+            video.playbackRate = 1; //默认播放速率为1
+        }
+        //调高声音
+        function upper(){
+            video.volume += 0.2;//声音值的范围是0-1
+        }
+        //减小声音
+        function lower(){
+            video.volume -= 0.2;
+        }
+		expand.onclick = function(){
+		     video.webkitRequestFullScreen();
+		};
+	</script>
+	<script>
+		function allowDrop(ev){
+		    ev.preventDefault();
+		}
+		
+		function drag(ev){
+		    ev.dataTransfer.setData("Text",ev.target.id);
+		}
+		
+		function drop(ev){
+		    ev.preventDefault();
+		    var data=ev.dataTransfer.getData("Text");
+		    ev.target.appendChild(document.getElementById(data));
+		}
+		function clearMap(){
+		context.clearRect(0,0,300,200);
+		}
+		var local = navigator.geolocation;
+		local.getCurrentPosition(sucCallback);
+		function sucCallback(position){
+			var coords = position.coords;
+			alert(coords.latitude);//	十进制数的纬度
+			alert(coords.longitude);//十进制数的经度
+			alert(coords.accuracy);//
+		}
+	</script>
+	
+	<script type="text/javascript">
+		var c=document.getElementById("Mycanvas");
+		var context=c.getContext("2d");
+		context.fillStyle="red";
+		context.fillRect(50,25,100,50);
+		
+		var c=document.getElementById("mycanvas");
+		var context=c.getContext("2d");
+		var context1=c.getContext("2d");
+		context.moveTo(0,0);
+		context.lineTo(100,100);
+		context.stroke();
+		context1.moveTo(0,0);
+		context1.lineTo(200,100);
+		context1.stroke();
+		
+		var c=document.getElementById("myCanvas");
+		var context=c.getContext("2d");
+		context.fillStyle="yellow";
+		context.beginPath();
+		context.arc(100,75,60,0,Math.PI*2,true);
+		context.closePath();
+		context.fill();
+		
+		var c=document.getElementById("MYcanvas");
+		var context=c.getContext("2d");
+		for(var i=0;i<=15;i++){
+		context.strokeStyle="blue";
+		context.beginPath();
+		context.arc(0,150,i*10,0,Math.PI*3/2,true);
+		/*弧形不是封闭的，所以不用closePath()方法，context.closePath();*/
+		context.stroke();
+		}
+		
+		var c=document.getElementById("MYCanvas");
+		var context=c.getContext("2d");
+		context.beginPath();
+		context.fillStyle="#ooo";
+		context.moveTo(25,25);
+		context.lineTo(150,25);
+		context.lineTo(25,150);
+		context.fill();
+		
+		var c=document.getElementById("MYCAnvas");
+		var context=c.getContext("2d");
+		context.beginPath();
+		context.strokeStyle="#ooo";
+		context.moveTo(25,25);
+		context.lineTo(150,25);
+		context.lineTo(25,150);
+		context.closePath();
+		context.stroke();
+		
+		var c=document.getElementById("MyCanvas");
+		var context=c.getContext("2d");
+		context.strokeStyle="#FFOOFF";
+		context.beginPath();
+		context.arc(200,150,100,-Math.PI*1/6,-Math.PI*5/6,true);
+		context.stroke();
+		
+		var c=document.getElementById("MyCAnvas");
+		var context=c.getContext("2d");
+		//下面开始绘制二次贝塞尔曲线
+		context.strokeStyle="dark";
+		context.beginPath();
+		context.moveTo(0,200);
+		context.quadraticCurveTo(75,50,300,200);
+		context.stroke();
+		context.globalCompositeOperation="source-over";
+		//下面绘制的直线用于表示上面曲线的控制点和控制线，控制点坐标即两直线的焦点（75,50）
+		context.strokeStyle="#ffooff";
+		context.beginPath();
+		context.moveTo(75,50);
+		context.lineTo(0,200);
+		context.moveTo(75,50);
+		context.lineTo(300,200);
+		context.stroke();
+		
+		var c=document.getElementById("MycAnvas");
+		var context=c.getContext("2d");
+		//开始绘制
+		context.fillStyle="yellow";
+		context.strokeStyle="red";
+		context.fillRect(20,20,100,100);
+		context.strokeRect(20,20,100,100);
+		context.fill();
+		context.stroke();
+		//保存当前Canvas 状态
+		context.save();
+		//绘制另一个矩形
+		context.fillStyle="#ccc";
+		context.strokeStyle="green";
+		context.fillRect(140,20,100,100);
+		context.strokeRect(140,20,100,100);
+		context.fill();
+		context.stroke();
+		//恢复第一个矩形状态
+		context.restore();
+		//绘制两个矩形
+		context.fillRect(20,140,50,50);
+		context.strokeRect(80,140,60,60);
+		
+		function draw(){
+			var ctx=document.getElementById("mYcanvas").getContext("2d");
+			//注意，所有的移动都基于这一上下文
+			ctx.translate(80,80);
+			for(var i=1;i<11;i++){
+				ctx.save();
+				ctx.translate(60*i,0);
+				drawTop(ctx,"rgb("+(30*i)+","+(255-30*i)+",255)");
+				drawGrip(ctx);
+				ctx.restore();
+				}
+			}
+		function drawTop(ctx,fillStyle){
+			ctx.fillStyle=fillStyle;
+			ctx.beginPath();
+			ctx.arc(0,0,30,0,Math.PI,true);
+			ctx.closePath;
+			ctx.fill();
+			}
+		function drawGrip(ctx){
+				ctx.save();
+				ctx.fillStyle="blue";
+				ctx.fillRect(-1.5,0,1.5,40);
+				ctx.beginPath();
+				ctx.strokeStyle="blue";
+				ctx.arc(-5,40,4,Math.PI,Math.PI*2,true);
+				ctx.stroke();
+				ctx.closePath();
+				ctx.restore();
+				}
+		window.onload=function(){
+			draw();
+			}
+	</script>
+	<script>
+		/* 知识点：        */
+        /*       this用法 */
+        /*       DOM事件 */
+        /*       定时器 */
+
+        window.onload = function () {
+            var container = document.getElementById('container');
+            var list = document.getElementById('list');
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var index = 1;
+            var timer;
+
+            function animate(offset) {
+                //获取的是style.left，是相对左边获取距离，所以第一张图后style.left都为负值，
+                //且style.left获取的是字符串，需要用parseInt()取整转化为数字。
+                var newLeft = parseInt(list.style.left) + offset;
+                list.style.left = newLeft + 'px';
+                //无限滚动判断
+                if (newLeft > -600) {
+                    list.style.left = -3000 + 'px';
+                }
+                if (newLeft < -3000) {
+                    list.style.left = -600 + 'px';
+                }
+            }
+
+            function play() {
+                //重复执行的定时器
+                timer = setInterval(function () {
+                    next.onclick();
+                }, 2000)
+            }
+
+            function stop() {
+                clearInterval(timer);
+            }
+
+            function buttonsShow() {
+                //将之前的小圆点的样式清除
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].className == "on") {
+                        buttons[i].className = "";
+                    }
+                }
+                //数组从0开始，故index需要-1
+                buttons[index - 1].className = "on";
+            }
+
+            prev.onclick = function () {
+                index -= 1;
+                if (index < 1) {
+                    index = 5
+                }
+                buttonsShow();
+                animate(600);
+            };
+
+            next.onclick = function () {
+                //由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
+                index += 1;
+                if (index > 5) {
+                    index = 1
+                }
+                animate(-600);
+                buttonsShow();
+            };
+
+            for (var i = 0; i < buttons.length; i++) {
+                (function (i) {
+                    buttons[i].onclick = function () {
+
+                        /*  这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
+                        /*  由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/
+                        var clickIndex = parseInt(this.getAttribute('index'));
+                        var offset = 600 * (index - clickIndex); //这个index是当前图片停留时的index
+                        animate(offset);
+                        index = clickIndex; //存放鼠标点击后的位置，用于小圆点的正常显示
+                        buttonsShow();
+                    }
+                })(i)
+            }
+
+            container.onmouseover = stop;
+            container.onmouseout = play;
+            play();
+
+        }
+	</script>
+</html>
